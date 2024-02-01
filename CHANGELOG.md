@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+- 🎉 feat: naive bayse project added
+- 🎉 feat: added database
 <!-- ## [0.0.2] - 2022-12-07
 
 ### Added
