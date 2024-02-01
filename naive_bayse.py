@@ -1,6 +1,7 @@
 import numpy as np
 
 
+# Gets data
 def get_data(addr: str) -> []:
     points = []
     with open(addr, "r") as file:
@@ -20,6 +21,7 @@ def get_data(addr: str) -> []:
     return np.array(points)
 
 
+# Calculates p(data|hypothesis) of each one + count of each output
 def calculate_probabilities(data: []) -> []:
     which_is_where = []
     outputs = {}
@@ -53,6 +55,7 @@ def calculate_probabilities(data: []) -> []:
     return [which_is_where, outputs]
 
 
+# Converts output count to probability
 def convert_to_probabilities(outputs: {}) -> dict:
     all = 0
     for key in outputs.keys():
@@ -62,6 +65,7 @@ def convert_to_probabilities(outputs: {}) -> dict:
     return outputs
 
 
+# Gets the class prediction of a single input data
 def __get_class(single: [], probabilities: [], outputs: {}) -> str:
     outputs_probabilities = {}
     valid_output = ""
